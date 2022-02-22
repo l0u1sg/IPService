@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { IpAddressComponent } from './ip-address/ip-address.component';
 import { IpExpertComponent } from './ip-expert/ip-expert.component'; 
@@ -27,7 +28,8 @@ import { IpExpertComponent } from './ip-expert/ip-expert.component';
     MatTabsModule,
     MatCardModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

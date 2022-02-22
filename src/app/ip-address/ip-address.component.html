@@ -3,7 +3,9 @@
     <mat-card tabindex="-1">
       <mat-card-header>
         <mat-card-title>
-          <h1>Your IP address is : {{ip}} 🚀</h1>
+          <h1>Your IP address is : 
+            <strong>{{ipAddress || "please wait"}}</strong>
+            🚀</h1>
         </mat-card-title>
       </mat-card-header>
     </mat-card>

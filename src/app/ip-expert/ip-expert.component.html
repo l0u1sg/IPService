@@ -3,12 +3,13 @@
         <mat-card>
             <mat-card-title>Geolocation 📍</mat-card-title>
             <mat-card-content>
-                <b>Latitude : </b> <br>
-                <b>Longitude : </b> 00<br>
-                <b>City : </b> Paris<br>
-                <b>Country : </b> France<br>
-                <b>Country Code : </b> 33<br>
-                <b>Region : </b> Ile de France<br>
+                <b>Latitude : </b> {{lat || "please wait"}}<br>
+                <b>Longitude : </b> {{lon || "please wait"}}<br>
+                <b>City : </b> {{city || "please wait"}}<br>
+                <b>ZIP : </b> {{zip || "please wait"}}<br>
+                <b>Country : </b> {{country || "please wait"}}<br>
+                <b>Country Code : </b> {{countryCode || "please wait"}}<br>
+                <b>Region : </b> {{regionName || "please wait"}}<br>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>
@@ -16,7 +17,12 @@
         <mat-card>
             <mat-card-title>Connection 📡</mat-card-title>
             <mat-card-content>
-                <b>IP Address : </b>
+                <b>IP Address : </b> {{ip || "please wait"}}<br>
+                <b>Hostname : </b> {{hostname || "please wait"}}<br>
+                <b>ISP : </b> {{isp || "please wait"}}<br>
+                <b>AS : </b> {{as1 || "please wait"}}<br>
+                <b>ASN :</b> {{ASN || "please wait"}}<br>
+                <b>Mobile: </b> {{isMobile || "please wait"}}<br>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>
@@ -24,7 +30,8 @@
         <mat-card>
             <mat-card-title>Security 🔐</mat-card-title>
             <mat-card-content>
-                <b>IP Address : </b>
+                <b>Proxy : </b> {{isProxy || "please wait"}}<br>
+                <b>Hosting: </b> {{isHosting || "please wait"}}<br>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>
