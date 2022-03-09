@@ -1,4 +1,4 @@
-<mat-grid-list cols="2" rowHeight="2:1">
+<mat-grid-list cols="2" rowHeight="2:2">
     <mat-grid-tile>
         <mat-card>
             <mat-card-title>Geolocation 📍</mat-card-title>
@@ -18,28 +18,8 @@
             <mat-card-title>Connection 📡</mat-card-title>
             <mat-card-content>
                 <b>IP Address : </b> {{ip || "please wait"}}<br>
-                <b>Hostname : </b> {{hostname || "please wait"}}<br>
                 <b>ISP : </b> {{isp || "please wait"}}<br>
                 <b>AS : </b> {{as1 || "please wait"}}<br>
-                <b>ASN :</b> {{ASN || "please wait"}}<br>
-                <b>Mobile: </b> {{isMobile || "please wait"}}<br>
-            </mat-card-content>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-card>
-            <mat-card-title>Security 🔐</mat-card-title>
-            <mat-card-content>
-                <b>Proxy : </b> {{isProxy || "please wait"}}<br>
-                <b>Hosting: </b> {{isHosting || "please wait"}}<br>
-            </mat-card-content>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-card>
-            <mat-card-title>Data provided by IPAPI</mat-card-title>
-            <mat-card-content>
-                <a href="https://ipapi.com/">https://ipapi.com/</a>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>

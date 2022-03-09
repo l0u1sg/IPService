@@ -79,26 +79,22 @@ export class IpExpertComponent implements OnInit {
     })
   }
   getAllData(ip: any) {
-    const query = `http://ip-api.com/json/${ip}?field=message,country,countryCode,regionName,city,zip,lat,lon,timezone,isp,as,asname,reverse,mobile,proxy,hosting,query`
+    const query = `https://ipapi.co/${ip}/json/`
     console.warn(query) 
     this.http.get(query).subscribe(data => {
       console.log(data)
-      this.country = (<any>data).country;
-      this.countryCode = (<any>data).countryCode;
-      this.regionName = (<any>data).regionName;
+      this.country = (<any>data).country_name;
+      this.countryCode = (<any>data).country_code;
+      this.regionName = (<any>data).region;
       this.city = (<any>data).city;
-      this.zip = (<any>data).zip;      
-      this.lat = (<any>data).lat;
-      this.lon = (<any>data).lon;
+      this.zip = (<any>data).postal;      
+      this.lat = (<any>data).latitude;
+      this.lon = (<any>data).longitude;
       this.timezone = (<any>data).timezone;
-      this.isp  = (<any>data).isp;
-      this.as1 = (<any>data).as;
-      this.ASN = (<any>data).asname;
+      this.isp  = (<any>data).org;
+      this.as1 = (<any>data).asn;
       this.hostname = (<any>data).reverse;
-      this.isMobile = (<any>data).mobile;
-      this.isProxy = (<any>data).proxy;
-      this.isHosting = (<any>data).hosting;
-      this.ip = (<any>data).query;
+      this.ip = (<any>data).ip;
     })
 
   }
